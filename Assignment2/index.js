@@ -1,9 +1,11 @@
+
 function changecoloronhover(id,clss,ind)
 {
+  debugger;
   const box=document.getElementById(id).getElementsByClassName(clss)[ind];
 
   // 👇️ Change text color on mouseover
-  box.addEventListener('mouseover', function handleMouseOver() {
+  box.addEventListener('mouseover', function andleMouseOver() {
     box.style.color = 'red';
   });
   
@@ -12,9 +14,8 @@ function changecoloronhover(id,clss,ind)
     box.style.color = 'black';
   });
 }
-
 changecoloronhover("box","float-child",0);
-changecoloronhover("box","float-child",1);
+ changecoloronhover("box","float-child",1);
 
 // const box=document.getElementById("box").getElementsByClassName("float-child")[1];
 // // const box = document.getElementById("box");
