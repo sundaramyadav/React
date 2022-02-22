@@ -43,14 +43,22 @@ import ReactDOM from 'react-dom';
 // ReactDOM.render(<App></App>, document.getElementById("root"))
 
 
-import App from "./components/EmployeeDetailsComponent";
-var details = {
-    name: "Sundaram",
-    avatar: "https://www.insureon.com/-/media/blog/posts/2021/photo_group-of-employees-working-on-project.png?h=370&iar=0&w=750&rev=3faabd3c0f7c4e11966caaa037fa4fc8",
-    createdAt: "Today",
-    id: 1
-}
-ReactDOM.render(<App {...details}></App>, document.getElementById("root"))
+import App from "./components/EmployeeListComponent";
+import EmployeeList from './Data/EmployeeList';
+// var EmpList =[{
+//     name: "Sundaram",
+//     avatar: "https://www.insureon.com/-/media/blog/posts/2021/photo_group-of-employees-working-on-project.png?h=370&iar=0&w=750&rev=3faabd3c0f7c4e11966caaa037fa4fc8",
+//     createdAt: "Today",
+//     id: 1
+// },
+// {
+// name: "Sundaram2",
+// avatar: "https://www.insureon.com/-/media/blog/posts/2021/photo_group-of-employees-working-on-project.png?h=370&iar=0&w=750&rev=3faabd3c0f7c4e11966caaa037fa4fc8",
+// createdAt: "Today",
+// id: 2
+// }
+// ]
+ReactDOM.render(<App EmpList={EmployeeList}></App>, document.getElementById("root"))
 
 // import App from "./components/DataBindingComponent";
 // ReactDOM.render(<App></App>, document.getElementById("root"))
