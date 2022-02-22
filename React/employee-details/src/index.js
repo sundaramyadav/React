@@ -43,7 +43,10 @@ import ReactDOM from 'react-dom';
 // ReactDOM.render(<App></App>, document.getElementById("root"))
 
 
-import App from "./components/EmployeeDetailsComponent";
+// import App from "./components/EmployeeDetailsComponent";
+// ReactDOM.render(<App></App>, document.getElementById("root"))
+
+import App from "./components/DataBindingComponent";
 ReactDOM.render(<App></App>, document.getElementById("root"))
 
 // import App from "./classComponent/IncrementCounter";
