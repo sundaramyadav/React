@@ -21,23 +21,7 @@ export default class EmployeeListComponent extends React.Component {
         )
     }
 
-    // deleteEmployee = (event) => {
-    //     debugger;
-    //     alert(event.target.accountNumber);
-    //     Axios.delete("https://localhost:5001/api/SundaramSbaccount/DeleteAcc?id=" +event.target.AccountNumber).then(() => {
-    //         alert("Employee is Deleted");
-    //         this.getData();
-    //     })
-    // }
-    // componentDidMount() {
-    //     var dataPromise = Axios.get("https://localhost:5001/api/SundaramSbaccount/Allacc");
-    //     dataPromise.then((response) => {
-    //         this.setState({
-    //             employeeList: response.data
-    //         })
-    //     })
-    // }
-
+   
 
 
     deleteEmployee = (event) => {

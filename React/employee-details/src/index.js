@@ -66,9 +66,11 @@ import ReactDOM from 'react-dom';
 // import App from "./classComponent/StockAPI";
 // ReactDOM.render(<App></App>, document.getElementById("root"))
 
-import App from "./classComponent/EmployeeDetailsComponentAPI";
- ReactDOM.render(<App></App>, document.getElementById("root"))
+// import App from "./classComponent/EmployeeDetailsComponentAPI";
+//  ReactDOM.render(<App></App>, document.getElementById("root"))
 
+ import App from "./classComponent/PostToApi";
+ ReactDOM.render(<App></App>, document.getElementById("root"))
 // import App from "./components/DataBindingComponent";
 // ReactDOM.render(<App></App>, document.getElementById("root"))
 
