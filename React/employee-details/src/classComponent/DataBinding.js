@@ -4,6 +4,7 @@ import { render } from "react-dom";
 export default class DataBinding extends Component {
     constructor() {
         super();
+        
         this.state = {
             name: ""
         }
