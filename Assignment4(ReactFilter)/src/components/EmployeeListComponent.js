@@ -2,13 +2,14 @@ import EmployeeDetailsComponent from "./EmployeeDetailsComponent";
 
 import { Component } from "react";
 import { render } from "react-dom";
-
+debugger;
 export default class EmployeeListComponent extends Component {
+    
     constructor() {
         super();
-        //this. nameChange = this. nameChange.bind(this);
+       
         this.state = {
-            searchname: ""
+            searchname:""
         };
     }
     debugger;
@@ -18,25 +19,20 @@ export default class EmployeeListComponent extends Component {
         })
     }
 
-    chec(employee) {
-        debugger;
-        if (this.state.searchname ==="") {
-            return (
+    // chec=(employee)=> {
+    //     debugger;
+    //     if ((employee.name).includes(this.state.searchname)) {
+    //         return (
 
 
-                <EmployeeDetailsComponent {...employee}></EmployeeDetailsComponent>
-            )
-        }
+    //             <EmployeeDetailsComponent {...employee}></EmployeeDetailsComponent>
+    //         )
+    //     }
+        
 
 
-    }
-    // nameChange(event){
-
-    //     this.setState({
-    //         searchname: event.target.value
-    //     })
     // }
-
+    
     render() {
         return (
             <div>
@@ -49,41 +45,38 @@ export default class EmployeeListComponent extends Component {
                 <input id="name" onChange={this.nameChange} />
 
 
-                <p>{this.state.searchname}</p>
+                
 
                 <div>
-                    <p>{this.state.searchname}</p>
+                  
 
 
                     {this.props.EmpList.map( (employee)=>{
                      
                           debugger;
                          
-                         {this.chec(employee)} 
-                        // if(employee.name==="Bernita Fadel")
-                        // return(
+                        //this.chec(employee)
+                      
+                          
+                        
+
+                           if(this.state.searchname==="")
+                           {
+                           return(
 
 
-                        //           <EmployeeDetailsComponent {...employee}></EmployeeDetailsComponent>
-                        //        )
+                               <EmployeeDetailsComponent {...employee}></EmployeeDetailsComponent>
+                           )
+                            }
+                           if((employee.name.toLowerCase()).includes(this.state.searchname.toLowerCase()))
+                           {
 
-                        //    if(this.state.searchname==="")
-                        //    {
-                        //    return(
-
-
-                        //        <EmployeeDetailsComponent {...employee}></EmployeeDetailsComponent>
-                        //    )
-                        //     }
-                        //    if((employee.name).includes(this.state.searchname))
-                        //    {
-
-                        //    return(
+                           return(
 
 
-                        //        <EmployeeDetailsComponent {...employee}></EmployeeDetailsComponent>
-                        //    )
-                        //    }
+                               <EmployeeDetailsComponent {...employee}></EmployeeDetailsComponent>
+                           )
+                           }
                     })
                     }
                 </div>
