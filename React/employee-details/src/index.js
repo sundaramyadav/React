@@ -64,13 +64,31 @@ import ReactDOM from 'react-dom';
 // ReactDOM.render(<App></App>, document.getElementById("root"))
 
 // import App from "./classComponent/StockAPI";
-// ReactDOM.render(<App></App>, document.getElementById("root"))
+// var stockInfo = [
+//     "https://priceapi.moneycontrol.com/pricefeed/nse/equitycash/NLC",
+//     "https://priceapi.moneycontrol.com/pricefeed/nse/equitycash/SBI",
+//     "https://priceapi.moneycontrol.com/pricefeed/nse/equitycash/NLC",
+//     "https://priceapi.moneycontrol.com/pricefeed/nse/equitycash/SBI",
+//     "https://priceapi.moneycontrol.com/pricefeed/nse/equitycash/NLC",
+//     "https://priceapi.moneycontrol.com/pricefeed/nse/equitycash/SBI",
+//     "https://priceapi.moneycontrol.com/pricefeed/nse/equitycash/NLC",
+//     "https://priceapi.moneycontrol.com/pricefeed/nse/equitycash/SBI",
+//     "https://priceapi.moneycontrol.com/pricefeed/nse/equitycash/NAC"
+// ]
+
+// ReactDOM.render((
+//     <div>
+//         {stockInfo.map((stock) => {
+//             return <App apiUrl={stock}></App>
+//         })}
+//     </div>
+// ), document.getElementById("root"))
 
 // import App from "./classComponent/EmployeeDetailsComponentAPI";
 //  ReactDOM.render(<App></App>, document.getElementById("root"))
 
- import App from "./classComponent/PostToApi";
- ReactDOM.render(<App></App>, document.getElementById("root"))
+//  import App from "./classComponent/PostToApi";
+//  ReactDOM.render(<App></App>, document.getElementById("root"))
 // import App from "./components/DataBindingComponent";
 // ReactDOM.render(<App></App>, document.getElementById("root"))
 
@@ -86,4 +104,24 @@ import ReactDOM from 'react-dom';
 
 
 
+// import App from "./hooksImplementation/CreateUseStateCounter";
+// ReactDOM.render(<App></App>, document.getElementById("root"))
 
+
+// import App from "./hooksImplementation/StockHook";
+// ReactDOM.render(<App url={"https://priceapi.moneycontrol.com/pricefeed/nse/equitycash/NAC"}></App>, document.getElementById("root"))
+
+// import App from "./hooksImplementation/CreateUseStateCounter";
+// ReactDOM.render(<App ></App>, document.getElementById("root"))
+
+
+
+// import App from "./hooksImplementation/StockHook";
+// ReactDOM.render(<App></App>, document.getElementById("root"))
+
+
+// import App from "./hooksImplementation/EmployeeListHook";
+// ReactDOM.render(<App></App>, document.getElementById("root"))
+
+import App from "./hooksImplementation/HierarchyHook";
+ReactDOM.render(<App></App>, document.getElementById("root"))

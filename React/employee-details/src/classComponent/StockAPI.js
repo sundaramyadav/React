@@ -6,7 +6,7 @@ export default class StockApi extends React.Component {
     constructor() {
         super();
         this.state = {
-            Sbi: []
+            Stock: []
             
         }
     }
@@ -14,10 +14,10 @@ export default class StockApi extends React.Component {
     render() {
         return (
             <div>
-                <h1>Details about stock is given below:</h1>
+               
                 
                 
-                     <APIStockComponent  {...this.state.Sbi} ></APIStockComponent>
+                     <APIStockComponent  {...this.state.Stock} ></APIStockComponent>
                 
                 )
             </div>
@@ -25,12 +25,12 @@ export default class StockApi extends React.Component {
     }
 
     componentDidMount() {
-        var dataPromise = Axios.get("https://priceapi.moneycontrol.com/pricefeed/bse/equitycash/SBI");
-        debugger;
-        dataPromise.then((response) => {
-            this.setState({
-                Sbi: response.data
-            })
-        })
+        setInterval(() => {
+            Axios.get(this.props.apiUrl).then((response) => {
+
+                this.setState({ Stock: response.data.data })
+                //console.log(this.state.stockPrice)
+            });
+        }, 1000);
     }
 }
