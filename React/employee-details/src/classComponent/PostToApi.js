@@ -41,36 +41,27 @@ this.setState({
 
 debugger;
     AddEmployee = (event) => {
+        event.preventDefault();
         
-        alert("asdsa")
-      const data1={
-        AccountNumber:this.state.accountNumber,
-        CustomerName:this.state.customerName,
-        CustomerAddress:this.state.customerAddress,
-        CurrentBalance:this.state.currentBalance
+      let data1={
+        accountNumber:parseInt(this.state.accountNumber,10),
+        customerName:this.state.customerName,
+        customerAddress:this.state.customerAddress,
+        currentBalance:parseInt(this.state.currentBalance, 10)
 
       };
-      alert(data1.AccountNumber);
+     
       debugger;
-        Axios.post("https://localhost:5001/api/SundaramSbaccount/Addacc",data1).then(() => {
+        Axios.post("https://localhost:5001/api/SundaramSbaccount/Addacc",data1).then((response) => {
             alert("Employee is Added");
             this.getData();
         })
+        
     }
 
-    getData = () => {
-        var dataPromise = Axios.get("https://localhost:5001/api/SundaramSbaccount/Allacc");
-        dataPromise.then((response) => {
-            this.setState({
-                employeeList: response.data
-            })
-        })
-    }
+   
 
-    componentDidMount() {
-        this.getData();
-    }
-
+   
     
 }
 debugger;
