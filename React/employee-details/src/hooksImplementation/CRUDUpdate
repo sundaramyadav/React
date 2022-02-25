@@ -1,0 +1,53 @@
+import React, { useEffect } from 'react';
+import Axios from "axios";
+import { useState} from 'react';
+//import { Link,useLocation,useParams } from "react-router-dom";
+
+export default function EmployeePostComponentHook(props){
+    var [accountNumber, setaccountNumber] = useState(0);
+    var [customerName, setcustomerName] = useState('');
+    var [customerAddress, setcustomerAddress] = useState('');
+    var [currentBalance, setcurrentBalance] = useState(0);
+    //let params = useParams();
+
+    useEffect(() => {
+        //alert(this.props.match.params.eid);
+        Axios.get('https://localhost:5001/api/SundaramSbaccount/byid/${props.accountNumber}').then((response) => {
+            setaccountNumber(response.data.accountNumber);
+            setcustomerName(response.data.customerName);
+            setcustomerAddress(response.data.customerAddress);
+            setcurrentBalance(response.data.currentBalance);
+        })       
+    }, [])
+    
+    function updateEmployee(){
+        var putdata={
+            accountNumber:parseInt(accountNumber,10),
+            customerName:customerName,
+            customerAddress:customerAddress,
+            currentBalance:parseInt(salary,10)
+        }
+        Axios.put('https://localhost:5001/api/SundaramSbaccount/EditAcc/${props.eid}',putdata).then(()=>{
+            alert("Employee Updated");  
+        })   
+    }
+    
+    return (
+        <div>
+            <h2>Update the Employee</h2>
+            <div>
+            <form onSubmit={updateEmployee}>
+                    <label>AccountNumber: </label>
+                    <input type="number" name="accountNumber" onChange={(e) => setaccountNumber(e.target.value)} /><br></br>
+                    <label>EmpName: </label>
+                    <input type="text" name="customerName" onChange={(e) => setcustomerName(e.target.value)} /><br></br>
+                    <label>EmpDesignation: </label>
+                    <input type="text" name="customerAddress" onChange={(e) => setcustomerAddress(e.target.value)} /><br></br>
+                    <label>EmpSalary: </label>
+                    <input type="number" name="currentBalance" onChange={(e) =>setcurrentBalance(e.target.value)} /><br></br><br></br>
+                    <input type="submit" value="Submit" />
+                </form>
+            </div>
+        </div>
+    )
+}
